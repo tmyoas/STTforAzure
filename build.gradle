@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.tmyoas'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://csspeechstorage.blob.core.windows.net/maven/'
+    }
+}
+
+dependencies {
+    compile(group: 'com.microsoft.cognitiveservices.speech', name: 'client-sdk', version: '1.0.1', ext: 'jar')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
